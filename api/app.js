@@ -7,6 +7,9 @@ const cors = require('cors');
 const { usersRoute } = require('./routes/userRoutes.js');
 
 
+dotenv.config()
+
+const app = express()
 
 main().catch(err => console.log(err));
 
@@ -15,9 +18,7 @@ async function main() {
   console.log('data base is conncted');
 }
 
-dotenv.config()
 
-const app = express()
 
 app.use(cors())
 
@@ -30,6 +31,4 @@ app.get('/health', (req, res) => {
 app.use('/api/v1/auth', authRoutes)
 app.use('/api/v1/users', usersRoute)
 
-app.listen(process.env.PORT, () => {
-    console.log("server is running");
-})
+module.exports = app;
