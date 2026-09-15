@@ -1,7 +1,7 @@
 const Users = require("../models/usersModel")
 const jwt = require("jsonwebtoken");
 const bcrypt = require('bcrypt');
-const {v4} = require('uuid');
+const { v4: uuidv4 } = require('uuid');
 const sendEmailOTP = require("../utiles/importentFuntion");
 
 
