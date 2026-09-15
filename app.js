@@ -34,4 +34,4 @@ app.get('/', (req, res) => {
     res.send('Backend is running on Vercel 🚀');
 });
 
-module.exports = app;
+export default app;
